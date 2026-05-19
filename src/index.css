@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;700&family=Caveat:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --warm-paper: #f5f0e8;
+    --deep-espresso: #2b1b17;
+    --crimson: #d42b2b;
+    --gold: #c9912d;
+    --light-gold: #e8c96a;
+    --ink: #1a1a1a;
+    --soft-cream: #faf8f3;
+    --charcoal: #3d3d3d;
+    --border-warm: #e0d5c8;
+    --overlay-grain: rgba(43, 27, 23, 0.03);
+
+    --font-playfair: 'Playfair Display', serif;
+    --font-inter: 'Inter', sans-serif;
+    --font-caveat: 'Caveat', cursive;
+
+    --section-padding: clamp(80px, 10vh, 120px);
+    --content-max-width: 1100px;
+    --page-padding: clamp(24px, 4vw, 48px);
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    font-family: var(--font-inter);
+    background-color: var(--warm-paper);
+    color: var(--deep-espresso);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: rgba(212, 43, 43, 0.15);
+    color: var(--deep-espresso);
+  }
+}
+
+@layer components {
+  .font-playfair {
+    font-family: var(--font-playfair);
+  }
+
+  .font-inter {
+    font-family: var(--font-inter);
+  }
+
+  .font-caveat {
+    font-family: var(--font-caveat);
+  }
+
+  .text-h1 {
+    font-family: var(--font-playfair);
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+  }
+
+  .text-h2 {
+    font-family: var(--font-playfair);
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+  }
+
+  .text-h3 {
+    font-family: var(--font-inter);
+    font-size: clamp(1rem, 1.8vw, 1.15rem);
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+  }
+
+  .text-body-large {
+    font-family: var(--font-inter);
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  .text-caption {
+    font-family: var(--font-inter);
+    font-size: 0.8rem;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+
+  .text-cta {
+    font-family: var(--font-inter);
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .text-nav {
+    font-family: var(--font-inter);
+    font-size: 0.85rem;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .text-vertical {
+    font-family: var(--font-playfair);
+    font-size: clamp(0.7rem, 1vw, 0.85rem);
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+
+  .text-handwritten {
+    font-family: var(--font-caveat);
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-weight: 400;
+    line-height: 1.3;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
